@@ -89,7 +89,7 @@ if(Test-Path $ApplicationIDcsv)
     $data = @()
     $progress = 0
 
-    Connect-MgGraph
+    Connect-MgGraph -scopes "Directory.Read.All"
 
     foreach($app in $apps)
     {
